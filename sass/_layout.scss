@@ -1,0 +1,50 @@
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container {
+  max-width: 118rem;
+  margin-inline: auto;
+  max-height: 100%;
+  padding: 3rem 0;
+
+  @media screen and (max-width: 76em) {
+    max-width: 87vw;
+  }
+}
+
+//#######################f
+//#######################
+
+.header {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 37.5em) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+//#######################
+//#######################
+
+.general-overview {
+  @include grid();
+}
+
+//#######################
+//#######################
+
+.today-overview {
+  margin-top: 4rem;
+
+  &__container {
+    @include grid();
+  }
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --primary-color-bg: hsl(0, 0%, 100%);
+  --primary-color-top-bg-pattern: hsl(225, 100%, 98%);
+  --primary-color-card-bg: hsl(227, 47%, 96%);
+  --tertiary-color-text: hsl(228, 12%, 44%);
+  --secondary-color: hsl(230, 17%, 14%);
+}
+
+[data-theme='dark'] {
+  --primary-color-bg: hsl(230, 17%, 14%);
+  --primary-color-top-bg-pattern: hsl(232, 19%, 15%);
+  --primary-color-card-bg: hsl(228, 28%, 20%);
+  --tertiary-color-text: hsl(228, 34%, 66%);
+  --secondary-color: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  @media screen and (max-width: 56em) {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  // // min-height: 100%;
+  // max-height: 100%;
+  // min-height: max-content;
+  // background: no-repeat;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color-top-bg-pattern) 30vh,
+    var(--primary-color-bg) 0
+  );
+  background-repeat: no-repeat;
+}
